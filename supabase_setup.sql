@@ -3,6 +3,17 @@
 -- Supabase SQL Editor에서 실행하세요
 -- =====================================================
 
+-- 0. 기존 테이블 삭제 (초기화)
+-- 외래키 제약조건 때문에 순서 중요
+DROP TABLE IF EXISTS auction_alerts CASCADE;
+DROP TABLE IF EXISTS auction_detected_items CASCADE;
+DROP TABLE IF EXISTS auction_keywords CASCADE;
+
+-- 기존 테이블명도 삭제 (혹시 있을 경우)
+DROP TABLE IF EXISTS alerts CASCADE;
+DROP TABLE IF EXISTS detected_items CASCADE;
+DROP TABLE IF EXISTS keywords CASCADE;
+
 -- 1. auction_keywords 테이블 생성
 CREATE TABLE auction_keywords (
     id SERIAL PRIMARY KEY,
