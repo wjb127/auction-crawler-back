@@ -4,7 +4,7 @@ from app.database import Base
 
 
 class DetectedItem(Base):
-    __tablename__ = "detected_items"
+    __tablename__ = "auction_detected_items"
     
     id = Column(Integer, primary_key=True, index=True)
     title = Column(Text, nullable=False)

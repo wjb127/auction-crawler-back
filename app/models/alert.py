@@ -5,11 +5,11 @@ from app.database import Base
 
 
 class Alert(Base):
-    __tablename__ = "alerts"
+    __tablename__ = "auction_alerts"
     
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(String(100), nullable=False, index=True)
-    item_id = Column(Integer, ForeignKey("detected_items.id"), nullable=False)
+    item_id = Column(Integer, ForeignKey("auction_detected_items.id"), nullable=False)
     message = Column(Text)
     sent_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
     

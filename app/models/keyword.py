@@ -4,7 +4,7 @@ from app.database import Base
 
 
 class Keyword(Base):
-    __tablename__ = "keywords"
+    __tablename__ = "auction_keywords"
     
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(String(100), nullable=False, index=True)
